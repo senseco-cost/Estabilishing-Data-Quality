@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
+# you need to install ERA5 in GEE function to run this code
 
 from era5_in_gee_functions import createFileList, createDailyFiles, convertFilesToTiff, uploadToGCP, createManifestCombined_daily, createListOfLists, ee_ingest
 import time
 
 import os
 
-###########################################
+#########################################
 
 execTime = time.time()
 
