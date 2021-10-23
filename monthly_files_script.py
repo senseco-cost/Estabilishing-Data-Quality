@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Feb 25 15:46:02 2019
-
-@author: julia_wagemann
-"""
+# you need to install era5_in_gee functions to run this script
 
 from era5_in_gee_functions import createFileList, createListOfLists, createMonthlyFiles, convertMonthlyFilesToTiff, uploadMonthlyFilesToGCP, createManifestCombined_monthly, ee_ingest
 import time
@@ -15,10 +11,10 @@ execTime = time.time()
 
 ############################################
 
-directory1 = '/Volumes/G-Drive with Thunderbolt/'
-directory2 = '/Volumes/jules_eh2/'
-directory3 = '/Volumes/FREECOM HDD/'
-directory4 = '/Volumes/LaCie/'
+directory1 = ''
+directory2 = ''
+directory3 = ''
+directory4 = ''
 
 yearList=['2010','2011','2012','2013','2014','2015','2016','2017']
 
@@ -32,8 +28,8 @@ bucket_2d = 'era5_2d_monthly'
 bucket_u10 = 'era5_u10_monthly'
 bucket_v10 = 'era5_v10_monthly'
 
-directory_manifest = '/Volumes/G-Drive with Thunderbolt/manifests/'
-directory_outfile = '/Volumes/G-Drive with Thunderbolt/manifests/era5_monthly/'
+directory_manifest = '/'
+directory_outfile = '//'
 
 ############################################
 
