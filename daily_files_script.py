@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Feb 25 14:02:16 2019
-
-@author: julia_wagemann
-"""
 
 
 from era5_in_gee_functions import createFileList, createDailyFiles, convertFilesToTiff, uploadToGCP, createManifestCombined_daily, createListOfLists, ee_ingest
@@ -16,10 +11,10 @@ import os
 
 execTime = time.time()
 
-directory1 = '/Volumes/G-Drive with Thunderbolt/'
-directory2 = '/Volumes/jules_eh2/'
-directory3 = '/Volumes/FREECOM HDD/'
-directory4 = '/Volumes/LaCie/'
+directory1 = ''
+directory2 = ''
+directory3 = ''
+directory4 = ''
 
 
 #yearList = ['1990','1991','1992','1993','1994','1995','1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019']
@@ -36,8 +31,8 @@ bucket_2d = 'era5_2d_daily'
 bucket_u10 = 'era5_u10_daily'
 bucket_v10 = 'era5_v10_daily'
 
-directory_manifest = '/Volumes/G-Drive with Thunderbolt/manifests/'
-directory_outfile = '/Volumes/G-Drive with Thunderbolt/manifests/era5_daily/'
+directory_manifest = ''
+directory_outfile = ''
 
 ############################################
 
@@ -64,9 +59,9 @@ for year in yearList:
     convertFilesToTiff(directory4, 'daily', '10m_u_component_of_wind', year, 4326)
     convertFilesToTiff(directory4, 'daily', '10m_v_component_of_wind', year, 4326)
 
-    cmd = 'mv /Volumes/G-DRIVE\ with\ Thunderbolt/era5_t2m/tiff/daily/'+year+'/*_max.tif /Volumes/G-DRIVE\ with\ Thunderbolt/era5_maximum_2m_temperature_since_previous_post_processing/tiff/daily/'+year+'/'
+    cmd = 'mv /yourdirectary\ with\ yourdirectary/era5_t2m/tiff/daily/'+year+'/*_max.tif /yourdirectary\ with\ yourdirectary/era5_maximum_2m_temperature_since_previous_post_processing/tiff/daily/'+year+'/'
     os.system(cmd)
-    cmd = 'mv /Volumes/G-DRIVE\ with\ Thunderbolt/era5_t2m/tiff/daily/'+year+'/*_min.tif /Volumes/G-DRIVE\ with\ Thunderbolt/era5_minimum_2m_temperature_since_previous_post_processing/tiff/daily/'+year+'/'
+    cmd = 'mv /yourdirectary\ with\ yourdirectary/era5_t2m/tiff/daily/'+year+'/*_min.tif /yourdirectary\ with\ yourdirectary/era5_minimum_2m_temperature_since_previous_post_processing/tiff/daily/'+year+'/'
     os.system(cmd)
 
 
