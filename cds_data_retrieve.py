@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Dec 19 17:57:33 2019
 
-@author: julia_wagemann
-"""
 
 
 #!/usr/bin/env python
@@ -14,7 +10,7 @@ import pandas as pd
 c = cdsapi.Client()
 
 
-os.chdir('/Volumes/G-DRIVE with Thunderbolt/era5_minimum_2m_temperature_since_previous_post_processing/')
+os.chdir('')
 
 
 def retrieve_func(day, month, year,parameter,filename):
