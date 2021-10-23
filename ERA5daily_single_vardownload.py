@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Feb 25 14:02:16 2019
 
-@author: julia_wagemann
+YOU NEED TO INSTALL era5_in_gee_functions 
 """
 
 
